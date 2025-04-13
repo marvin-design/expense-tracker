@@ -3,7 +3,7 @@
 }
 
 #root {
-  padding: 5px;
+  padding: 20px;
   text-align: left;
   position: absolute;  
   top: 0;
@@ -72,4 +72,21 @@ input:focus {
 .submit-button:hover {
   background-color: #45a049;
 }
+
+.app-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.records-container {
+  max-width: 500px;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
 

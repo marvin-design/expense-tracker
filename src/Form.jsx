@@ -1,95 +1,96 @@
 import React, { useState } from 'react';
 
-
-function Form({ onAddExpense }) {
-  const [formData, setFormData] = useState({
+const Form = ({ onAddExpense }) => {
+  const [expense, setExpense] = useState({
     name: '',
     description: '',
     category: '',
     amount: '',
-    date: ''
+    date: '',
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value
-    }));
+    setExpense((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (onAddExpense) {
-      onAddExpense(formData);
+    if (expense.name && expense.amount) {
+      onAddExpense(expense);
+      setExpense({
+        name: '',
+        description: '',
+        category: '',
+        amount: '',
+        date: '',
+      });
+    } else {
+      alert('Please fill in all required fields.');
     }
-    setFormData({
-      name: '',
-      description: '',
-      category: '',
-      amount: '',
-      date: ''
-    });
   };
 
   return (
-    <form className="form-container" onSubmit={handleSubmit}>
-      <h3>Add Expense</h3>
+    <form onSubmit={handleSubmit} className="form-container">
       <div className="form-group">
-        <label htmlFor="name">Name</label>
+        <label htmlFor="name">Expense Name</label>
         <input
-          id="name"
+          type="text"
           name="name"
-          value={formData.name}
+          value={expense.name}
           onChange={handleChange}
+          placeholder="Expense Name"
           required
         />
       </div>
+
       <div className="form-group">
         <label htmlFor="description">Description</label>
         <input
-          id="description"
+          type="text"
           name="description"
-          value={formData.description}
+          value={expense.description}
           onChange={handleChange}
-          required
+          placeholder="Description"
         />
       </div>
+
       <div className="form-group">
         <label htmlFor="category">Category</label>
         <input
-          id="category"
+          type="text"
           name="category"
-          value={formData.category}
+          value={expense.category}
           onChange={handleChange}
-          required
+          placeholder="Category"
         />
       </div>
+
       <div className="form-group">
         <label htmlFor="amount">Amount</label>
         <input
-          id="amount"
-          name="amount"
           type="number"
-          value={formData.amount}
+          name="amount"
+          value={expense.amount}
           onChange={handleChange}
+          placeholder="Amount"
           required
         />
       </div>
+
       <div className="form-group">
         <label htmlFor="date">Date</label>
         <input
-          id="date"
-          name="date"
           type="date"
-          value={formData.date}
+          name="date"
+          value={expense.date}
           onChange={handleChange}
-          required
         />
       </div>
-      <button className="submit-button" type="submit">Submit</button>
+
+      <button type="submit" className="submit-button">Add Expense</button>
     </form>
   );
-}
+};
 
 export default Form;
