@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import Form from './Form';
 
 class Expenses extends PureComponent {
   render() {
@@ -8,7 +9,7 @@ class Expenses extends PureComponent {
       <>
         <h1>EXPENSE TRACKER</h1>
         <p>Keep track of your spending and manage your finances with ease. Stay on top of your budget and make smarter financial decisions every day!</p>
-
+        <Form/>
         {records.length > 0 ? (
           <div className="records-container">
             <h3>Expense Records</h3>

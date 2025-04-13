@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Expenses from './Expenses';
-import Form from './Form';
+//import Form from './Form';
 import './App.css';
 
 function App() {
@@ -12,10 +12,12 @@ function App() {
 
   return (
     <div className="app-layout"> {/* Flex container */}
-      <Expenses records={records} />  {/* Left side */}
-      <Form onAddExpense={handleAddExpense} /> {/* Right side */}
+       <Expenses records={records} />  {/* Left side */}
     </div>
   );
 }
 
 export default App;
+
+
+
