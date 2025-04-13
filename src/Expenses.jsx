@@ -116,7 +116,7 @@ class Expenses extends PureComponent {
                 </tbody>
               </table>
             ) : (
-              <p>No matching expenses found.</p>
+              <p>Here are your expenses.</p>
             )}
           </div>
         </div>
