@@ -1,12 +1,82 @@
-# React + Vite
+# 💰 Expense Tracker App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📝 Description
 
-Currently, two official plugins are available:
+The **Expense Tracker** is a user-friendly web application designed to help you **track your spending**, **categorize expenses**, and **manage your finances** effectively.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You can:
+- Add new expenses using a simple form
+- View all your records in a dynamic, responsive table
+- Edit or delete entries as needed
+- Search through your expenses in real time
 
-## Expanding the ESLint configuration
+The app also stores your data in your browser’s **local storage**, so your records remain saved even after refreshing or closing the tab.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 👨‍💻 Author
+
+**David Marvin**
+
+---
+
+## ⚙️ Setup Instructions
+
+To run the project locally:
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/yourusername/expense-tracker.git
+   cd expense-tracker
+   npm install
+   npm start
+
+## ✅ Features
+📋 Add new expenses (name, description, category, amount, and date)
+
+🔍 Real-time search filter
+
+🖊️ Edit existing expense records
+
+🗑️ Delete entries
+
+💾 Data persistence via localStorage
+
+📱 Fully responsive and clean UI 
+
+## 🧪 BDD (Behavior Driven Development)
+
+    User Action	Expected Result
+    Submits a valid form	    Expense is added to the list and saved to storage
+    Enters a search term	    Only matching expenses are shown in the table
+    Clicks edit on a record	    Record fields appear in form for editing
+    Clicks delete on a record	Record is removed from the table and localStorage
+    Enters no or invalid data	Form validation alerts user
+
+## 🛠️ Technologies Used
+    React.js (Class Components)
+
+    HTML5 & CSS3
+
+    JavaScript (ES6+)
+
+    Local Storage for persistence
+
+## 🌐 Deployment
+
+You can access the live version here: https://expense-tracker-dv59n4rgj-marvin-designs-projects.vercel.app/
+
+## 📄 License
+MIT License
+
+© 2025 David Marvin
+
+Permission is hereby granted, free of charge, to anyone obtaining a copy of this software and associated documentation files (the “Software”), to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software.
+
+This permission applies only if the copyright and license notice appear in all copies or substantial portions of the Software.
+
+
+
+
+
